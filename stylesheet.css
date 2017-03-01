@@ -15,7 +15,7 @@ body{
 
 }
 
-#trouver {
+#trouver, .thumbnail {
 	background-image: url(alu_dark.png);
 	width: 100%;
 }
@@ -26,12 +26,18 @@ body{
 .thumbnail {
 	height: 318px;
 	font-family : 'Reenie Beanie', cursive;
-	font-size: 1,5em;
 	border : 0px;
+	font-color: white;
+
+}
+h4 {
+	font-size : 23px;
 }
 
-
 .btn {
+	position: bottom;
+	width : 80%;
+	
 
 
 }
