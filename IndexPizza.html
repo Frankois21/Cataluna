@@ -38,13 +38,13 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#tomate">Base Tomate</a></li>
-            <li><a href="#">Base Crème</a></li>
-            <li><a href="#">Dessert</a></li>
+            <li><a href="#creme">Base Crème</a></li>
+            <li><a href="#dessert">Dessert</a></li>
           </ul>
         </li>
-        <li><a href="#">Evenements</a></li>
-        <li><a href="#">Où nous trouver</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#evenement">Evenements</a></li>
+        <li><a href="#trouver">Où nous trouver</a></li>
+        <li><a href="#contact">Contact</a></li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -68,7 +68,7 @@
 
 				<!-- Le planning-->
 				<!-- 1er jour-->
-<div class="container-fluid hidden-xs">	
+<div class="container-fluid hidden-xs" id="trouver">	
 	<div class="row" background="brushed.png">
   			<div class="col-sm-6 col-md-4 col-lg-2">
   			  	<div class="thumbnail text-center">
@@ -238,7 +238,7 @@
 
 </div>		 
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" id="trouver">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -287,7 +287,7 @@
       <!-- Grosse image et suggestions, slurp :oP -->
 
   <div id="banniere_image">
-        <div id="description">
+        <div id="description" id="tomate">
         <p>Découvrez notre nouvelle recette de carbonara !</p>
         <p>Base tomate, champignons, poivrons, olives et b&#156;uf </p>
       </div>
@@ -637,7 +637,7 @@
 <!-- MENU CREME-->
 <div class="container-fluid" style="border: 2px solid black;">
 <!-- TITRE-->
-  <div class="row">
+  <div class="row" id="creme">
     <h2 class="col-md-4 col-md-offset-3">NOS BASES CREME</h2>
     <div class="col-md-5">
       <div class="col-md-2 col-md-offset-8">
@@ -790,7 +790,7 @@
 <!-- MENU DESSERT-->
 <div class="container-fluid" style="border: 2px solid black;">
   <!-- TITRE-->
-  <div class="row">
+  <div class="row" id="dessert">
     <h2 class="col-md-4 col-md-offset-3">NOS PIZZAS DESSERT</h2>
     <div class="col-md-5">
       <div class="col-md-2 col-md-offset-8">
@@ -878,7 +878,7 @@
 </div>
 
 <!-- EVENEMENTS-->
-<div class="container">
+<div class="container" id="evenement">
   <div class="row">
     <p class="col-md-4 col-md-offset-3">Disponible pour vos évènementiels : <br/>
        Lendemain de mariage, enterrement de vie de garçon/jeune fille, anniversaire, départ retraite, repas entreprise ...</p>
@@ -898,7 +898,7 @@
 
     
 
-      <div class="row">
+      <div class="row" id="contact">
 
         <div class="col-xs-2 col-xs-offset-1">
           <a href="https://www.facebook.com/catalunapizz/?fref=ts"><img src="Imagesbis/facebook.png"></a>
