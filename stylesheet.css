@@ -1,13 +1,38 @@
 
+/* COuleur de fond du HEADER doit être #CC0001  comme le FOOTER */
+
+
 
 /* Suggest */
 
-#banniere_image {
-	background-image: url(Imagesbis/pizzabis.jpg);
-	height: 900px;
+
+.description {
+	position: absolute;
+	padding-top: 20px;
+	bottom: 0;
+	width: 100%;
+	height: 20%;
+	font-size: 3em;
+	text-align: center;
+	color: white;
+	background-color: rgba(242, 12, 12, 0.4);
 }
 
+.blocsuggest {
+	position: relative;
+}
 
+.comment {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	background-color: rgba(242, 12, 12, 0.4);
+
+}
 
 /* Fin suggest */
 
