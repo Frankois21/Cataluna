@@ -1,3 +1,6 @@
+
+
+
 body{
 	background-image: url(old_map.png);
 }
@@ -16,3 +19,25 @@ body{
 	background-image: url(alu_dark.png);
 	width: 100%;
 }
+
+
+
+
+.thumbnail {
+	height: 318px;
+	font-family : 'Reenie Beanie', cursive;
+	font-size: 1,5em;
+	border : 0px;
+}
+
+
+.btn {
+
+
+}
+
+
+
+
+
+
