@@ -90,7 +90,7 @@ h4 {
 }*/
 /* Fin suggest */
 
-
+/*MENU*/
 .menu{
 	border: 3px dashed #CC0001;
 	border-radius: 15px;
@@ -124,8 +124,27 @@ h4 {
 	color: #CCCB00;
 	border: 0px;
 }
+/*MENU*/
 
-   /* Footer */
+/*INFOS PIZZAS*/
+
+#infos_pizz{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 3px dashed yellow;
+	border-radius: 30px;
+	background-color: white;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+/* Footer */
 .footlien{
 	text-decoration: none;
 	color: yellow;
