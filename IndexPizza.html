@@ -2,19 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="stylesheet.css">
 <title>Cataluna Pizza </title>
 
 <!-- BOOTSTRAP installation --> 
 <!-- Latest compiled and minified Bootstrap CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Latest compiled and minified Bootstrap JavaScript + JQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
 </head>
 <body>
-	<div class="container-fluid"> 
+
+
+
+	<div class="container-fluid" id="header"> 
 	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="twelve columns text-center">
   		<div class="container-fluid" col-xs-1; style="background-color: #D43F3A; height:100px; font-size: 40px; color:yellow"> <p><b>CATALUNA PIZZA<span style="color:black; position:right">  02 02 02 02 02</span></b></p>
     <!-- Brand and toggle get grouped for better mobile display -->
    			<div class="navbar-header">
@@ -27,6 +33,7 @@
     			  </button>
       <!--<img class="pull-left" src="logo.png" alt="A trouver"><a class="navbar-brand" href="#"> CatalunaPizza.fr</a><p class="hidden-xs navbar-text">Une pizza ? </p>
       </div>!-->
+      </div>
     	</div>
     </div> 
     
@@ -39,21 +46,27 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#tomate">Base Tomate</a></li>
-            <li><a href="#">Base Crème</a></li>
-            <li><a href="#">Dessert</a></li>
+            <li><a href="#creme">Base Crème</a></li>
+            <li><a href="#dessert">Dessert</a></li>
           </ul>
         </li>
-        <li><a href="#">Evenements</a></li>
-        <li><a href="#">Où nous trouver</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#evenement">Evenements</a></li>
+        <li><a href="#trouver">Où nous trouver</a></li>
+        <li><a href="#contact">Contact</a></li>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
 	</nav>
-	<br> <!-- Qui sommes nous-->
-	<div class="container-fluid" style="padding-top:150px">
+
+
+	<br> 
+
+
+
+  <!-- Qui sommes nous-->
+	<div class="container-fluid hidden-xs" id="biographie">
 		<div class="row"> 
-		<section style="border:1px solid yellow;"> <p style="font-size:20px;">Ouvert depuis Juillet 2015, nous confectionnons nos pizzas à partir des meilleurs ingrédients. Nous proposons aussi des boissons pour accompagner vos déjeuner et dîners.</p> </section>
+		<section> <p>Ouvert depuis Juillet 2015, nous confectionnons nos pizzas à partir des meilleurs ingrédients. Nous proposons aussi des boissons pour accompagner vos déjeuner et dîners.</p> </section>
 		</div>
 	</div>
 		<br>
@@ -69,7 +82,7 @@
 
 				<!-- Le planning-->
 				<!-- 1er jour-->
-<div class="container-fluid hidden-xs">	
+<div class="container-fluid hidden-xs" id="trouver">	
 	<div class="row" background="brushed.png">
   			<div class="col-sm-6 col-md-4 col-lg-2">
   			  	<div class="thumbnail text-center">
@@ -102,7 +115,7 @@
   			  	<div class="thumbnail text-center">
       				<img src="Imagesbis/MercrediSoirmin.png" alt="MercrediSoir" class="responsive">
      				<div class="caption">
-     		   		<h4>Nous nous trouvons sur le parking du V&B d'Olivet</h4>
+     		   		<h4>Nous nous trouvons sur le parking du V et B d'Olivet</h4>
      			 	<p><a button type="button" class="btn btn-danger glyphicon glyphicon-search" data-toggle="modal" data-target="#mercrediSoir"> Localiser</a></p>
      				</div>
      			</div>
@@ -114,7 +127,7 @@
     			<div class="modal-content">
       				<div class="modal-header">
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       					<h4 class="modal-title" id="myModalLabel">V&B D'Olivet</h4>
+       					<h4 class="modal-title" id="myModalLabel">V et B D'Olivet</h4>
       				</div>
       					<div class="modal-body">
         				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.6958169799755!2d1.9169739509574295!3d47.845485979099166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e414c1d4d8ed%3A0x726e5e10b968c0f3!2sV+and+B+Orl%C3%A9Ans!5e0!3m2!1sfr!2sfr!4v1488142817948" width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -130,7 +143,7 @@
   			  	<div class="thumbnail text-center">
       				<img src="Imagesbis/JeudiMidietSoirmin.png" alt="JeudiMidietSoir" class="responsive">
      				<div class="caption">
-     		   		<h4>Nous nous trouvons sur le parking du V&B d'Ingré</h4>
+     		   		<h4>Nous nous trouvons sur le parking du V et B d'Ingré</h4>
      			 	<p><a button type="button" class="btn btn-danger glyphicon glyphicon-search" data-toggle="modal" data-target="#jeudiMidietSoir"> Localiser</a></p>
      				</div>
      			</div>
@@ -141,7 +154,7 @@
     			<div class="modal-content">
       				<div class="modal-header">
         				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       					<h4 class="modal-title" id="myModalLabel">V&B D'Ingré</h4>
+       					<h4 class="modal-title" id="myModalLabel">V et B D'Ingré</h4>
       				</div>
       					<div class="modal-body">
         				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.763135266517!2d1.8530428509596826!3d47.90226967910342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4efff4e185e5f%3A0xea5c2561ac21e9f1!2sV+and+B+Orl%C3%A9Ans+Nord!5e0!3m2!1sfr!2sfr!4v1488144624002" width="550" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -238,6 +251,7 @@
 
 
 </div>		 
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" id="trouver">
 <div id="carroussel" class="visible-xs">
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -289,11 +303,16 @@
 
 
 
+<<<<<<< HEAD
 
       <!-- Grosse image et suggestions, slurp :oP -->
   <div class="blocsuggest">
   <img src="Imagesbis/pizzabis.jpg" class="img-responsive" alt="Responsive image">
         <div class="description">
+=======
+  <div id="banniere_image">
+        <div id="description" id="tomate">
+>>>>>>> f8486a5b7520f6c628e84158ed903d520d3c31e3
         <p>Découvrez notre nouvelle recette de carbonara !</p>
         <p>Base tomate, champignons, poivrons, olives et b&#156;uf </p>
         </div>
@@ -335,9 +354,9 @@
 
 
 <!-- MENU TOMATE-->
-<div class="container-fluid" style="border: 2px solid black;">
+<div class="container-fluid menu">
   <!-- TITRE-->
-  <div class="row">
+  <div class="row titre_menu">
     <h2 class="col-md-4 col-md-offset-3">NOS BASES TOMATES</h2>
     <div class="col-md-5">
       <div class="col-md-2 col-md-offset-8">
@@ -353,285 +372,270 @@
 <br>
   <!-- PIZZAS-->
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7 des_pizza">
       <h3>La Marguarita</h3>
       <p>Sauce tomate, fromage, olives.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>5,2 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>7 €</p>
       </div>
     </div>  
   </div>
   
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7 des_pizza">
       <h3>La Jamon</h3>
       <p>Sauce tomate, jambon blanc, fromage, olives.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>6.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>8.2 €</p>
       </div>
     </div>  
   </div>
 
-  <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>La Jamon</h3>
-      <p>Sauce tomate, jambon blanc, fromage, olives.</p>
-    </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
-        <p>7 €</p>
-      </div>
-      <div class="col-md-2" style="border:1px solid red;">
-       <p>9 €</p>
-      </div>
-    </div>  
-  </div>
-
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7 des_pizza">
       <h3>La Régina </h3>
       <p>Sauce tomate, jambon blanc, champignons, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Catalane</h3>
       <p>Sauce tomate, chorizo, oignons rouges, poivrons, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>L'orientale</h3>
+    <div class="col-md-7">
+      <h3>L'Orientale</h3>
       <p>Sauce tomate, Merguez, oignons rouges, poivrons, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.8 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>La cabra</h3>
+    <div class="col-md-7">
+      <h3>La Cabra</h3>
       <p>Sauce tomate, chèvre, fromage (accompagnement au choix : miel, persillade, ciboulette).</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.8 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>La calzone</h3>
+    <div class="col-md-7">
+      <h3>La Calzone</h3>
       <p>Sauce tomate, jambon blanc, oeuf, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>11.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La 4 fromages</h3>
       <p>Sauce tomate, bleu, parmesan, emmental, mozzarella.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.6 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10.2 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>L'Hawaîenne</h3>
       <p>Sauce tomate, jambon blanc, ananas, crème fraiche.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>11.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Temperadas</h3>
       <p>Sauce tomate, jambon blanc, champignons, artichauts, poivrons, oeuf, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>8 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Végétarienne</h3>
       <p>Sauce tomate, tomate fraiche, champignons, poivrons, oignons rouges, artichauts, fromage, olives.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>La barcelona</h3>
+    <div class="col-md-7" >
+      <h3>La Barcelona</h3>
       <p>Sauce tomate, boeuf haché, champignons, oeuf, oignons rouges, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>10.1 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13.5 €</p>
       </div>
     </div>  
   </div>
 
       <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Malaga</h3>
       <p>Sauce tomate, boeuf haché, chèvre, oeuf, oignons rouges, persillade, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>10.1 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>La mexicaine</h3>
+    <div class="col-md-7">
+      <h3>La Mexicaine</h3>
       <p>Sauce tomate, boeuf haché chorizo, oignons rouges, persillade, oeuf, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>10.1 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13.5 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Burger</h3>
       <p>Sauce tomate, boeuf haché, oignons rouges, cheddar, tomate fraiche, sauce burger, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>11 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>14 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
-      <h3>L'andalouse</h3>
+    <div class="col-md-7">
+      <h3>L'Andalouse</h3>
       <p>Sauce tomate, chorizo, merguez, lardons, boeuf haché, jambon blanc, oeuf, piment d'Espelette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>8.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>11 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Flamenco</h3>
       <p>Sauce tomate, pommes de terre, jambon Serrano, oeuf, piment d'Espelette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12 €</p>
       </div>
     </div>  
   </div>
 
     <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Caliente</h3>
       <p>Sauce tomate, jambon Serrano, chorizo, oeuf, piment d'Espelette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12 €</p>
       </div>
     </div>  
@@ -647,9 +651,9 @@
 
 
 <!-- MENU CREME-->
-<div class="container-fluid" style="border: 2px solid black;">
+<div class="container-fluid menu">
 <!-- TITRE-->
-  <div class="row">
+  <div class="row titre_menu" id="creme">
     <h2 class="col-md-4 col-md-offset-3">NOS BASES CREME</h2>
     <div class="col-md-5">
       <div class="col-md-2 col-md-offset-8">
@@ -664,135 +668,135 @@
 <br>
   <!-- PIZZAS-->
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Campesina</h3>
       <p>Crème, lardons, oignons rouges, persillade, fromage.</p>
     </div>
     <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Coklina</h3>
       <p>Crème, poulet, chèvre, miel, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9.3 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12.5 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Rambla</h3>
       <p>Crème, poulet, champignons, oeuf, oignons rouges, ciboulette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2>
        <p>12 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Madrilène</h3>
       <p>Crème, jambon blanc, pommes de terre, oignons rouges, oeuf, ciboulette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Del Mar</h3>
       <p>Crème, sauson fumé, ciboulette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>10.1 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13.5 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Carbonara</h3>
       <p>Crème, lardons, parmesan, oeuf, ciboulette, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>8.2 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>11 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7" >
       <h3>La Savoyarde</h3>
       <p>Crème, lardons, pommes de terre, reblochon, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9.7 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Boursin</h3>
       <p>Crème, boeuf haché, pommes de terre, Boursin, persillade, fromage.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>10.1 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>13.5 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Tonno</h3>
       <p>Crème, thon, oignons rouges, fromage, olives.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>9 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>12 €</p>
       </div>
     </div>  
@@ -800,9 +804,9 @@
 </div>
 
 <!-- MENU DESSERT-->
-<div class="container-fluid" style="border: 2px solid black;">
+<div class="container-fluid menu">
   <!-- TITRE-->
-  <div class="row">
+  <div class="row titre_menu" id="dessert">
     <h2 class="col-md-4 col-md-offset-3">NOS PIZZAS DESSERT</h2>
     <div class="col-md-5">
       <div class="col-md-2 col-md-offset-8">
@@ -817,60 +821,60 @@
 <br>
   <!-- PIZZAS-->
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Sweety Poire</h3>
       <p>Crème, poire, amandes, coulis de chocolat.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>6.7 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>9 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Sweetie Ananas</h3>
       <p>Crème, ananas, amandes, coulis de chocolat.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>6.7 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>9 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Smarties</h3>
       <p>Crème, Smarties, coulis de chocolat.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10 €</p>
       </div>
     </div>  
   </div>
 
   <div class="row">
-    <div class="col-md-7" style="border:1px solid red;">
+    <div class="col-md-7">
       <h3>La Tagada</h3>
       <p>Crème, bonbons Fraises Tagada, coulis de chocolat.</p>
     </div>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8" style="border:1px solid red;">
+    <div class="col-md-5 prix">
+      <div class="col-md-2 col-md-offset-8">
         <p>7.5 €</p>
       </div>
-      <div class="col-md-2" style="border:1px solid red;">
+      <div class="col-md-2">
        <p>10 €</p>
       </div>
     </div>  
@@ -890,7 +894,7 @@
 </div>
 
 <!-- EVENEMENTS-->
-<div class="container">
+<div class="container" id="evenement">
   <div class="row">
     <p class="col-md-4 col-md-offset-3">Disponible pour vos évènementiels : <br/>
        Lendemain de mariage, enterrement de vie de garçon/jeune fille, anniversaire, départ retraite, repas entreprise ...</p>
@@ -906,10 +910,15 @@
 
       <!-- footer -->
 
+<<<<<<< HEAD
     <footer class="container-fluid">
 
       
 
+=======
+    <footer class="container-fluid ">
+      <div class="row" id="contact">
+>>>>>>> f8486a5b7520f6c628e84158ed903d520d3c31e3
         <div class="row">
           <div class="col-xs-2 col-xs-offset-1">
             <a href="https://www.facebook.com/catalunapizz/?fref=ts"><img src="Imagesbis/facebook.png"></a>

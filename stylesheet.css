@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /* COuleur de fond du HEADER doit être #CC0001  comme le FOOTER */
 
 
@@ -66,3 +67,97 @@ footer{
 }
 
     /* Fin footer */
+=======
+
+
+body{
+	background-image: url(old_map.png);
+}
+p {
+	font-size : calc (12px+ 2vw);
+}
+
+#biographie {
+	border: 2px dashed #CC0001;
+	border-radius: 15px;
+	margin-top: 150px;
+	font-size: 1.6em;
+	text-align: center;
+	background-color: white;
+
+}
+
+#trouver, .thumbnail {
+	background-image: url(alu_dark.png);
+	width: 100%;
+}
+
+
+
+
+.thumbnail {
+	height: 318px;
+	font-family : 'Reenie Beanie', cursive;
+	border : 0px;
+
+
+}
+h4 {
+
+	font-size : 23px;
+	font-weight : bold;
+	color: white;
+}
+
+.btn {
+
+	margin-left: 12px;
+
+}
+
+#trouver p {
+
+	position: absolute;
+	bottom : 0;
+}
+
+#myModalLabel {
+	color : black;
+
+}
+
+.menu{
+	border: 3px dashed #CC0001;
+	border-radius: 15px;
+	margin-top: 25px;
+	background-color: white;
+}
+
+.menu .row{
+	border: 1px dotted #CC0001;
+	border-radius: 10px;
+	margin-left: 25px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+
+.des_pizza h3{
+	font-weight: bold;
+
+}
+
+.prix p{
+	border: 1px dotted #CC0001;
+	height: 65px;
+	border-radius: 6px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.menu .titre_menu{
+	color: #CCCB00;
+	border: 0px;
+}
+>>>>>>> f8486a5b7520f6c628e84158ed903d520d3c31e3
