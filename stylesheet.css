@@ -1,0 +1,43 @@
+
+
+/* Suggest */
+
+#banniere_image {
+	background-image: url(Imagesbis/pizzabis.jpg);
+	height: 900px;
+}
+
+
+
+/* Fin suggest */
+
+
+
+
+
+   /* Footer */
+.footlien{
+	text-decoration: none;
+	color: yellow;
+}
+
+footer{
+	font-family: "Reenie Beanie", Helvetia, Serif;
+	background-image: url(Imagesbis/alu_dark.png);
+	background-repeat: repeat;
+	color: yellow;
+	margin-top: 5px;
+
+}
+
+
+.bas_footer {
+	background-color: #CC0001;
+	margin-top: 5px;
+	padding-top: 15px;
+	height: 70px;
+	font-size: 1.3em;
+
+}
+
+    /* Fin footer */
