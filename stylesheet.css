@@ -11,3 +11,8 @@ body{
 	background-color: white;
 
 }
+
+#trouver {
+	background-image: url(alu_dark.png);
+	width: 100%;
+}
