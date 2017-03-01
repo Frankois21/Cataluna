@@ -41,6 +41,7 @@ h4 {
 }
 
 .btn {
+
 	margin-left: 12px;
 
 }
@@ -53,6 +54,40 @@ h4 {
 
 #myModalLabel {
 	color : black;
+
 }
 
+.menu{
+	border: 3px dashed #CC0001;
+	border-radius: 15px;
+	margin-top: 25px;
+	background-color: white;
+}
 
+.menu .row{
+	border: 1px dotted #CC0001;
+	border-radius: 10px;
+	margin-left: 25px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+}
+
+.des_pizza h3{
+	font-weight: bold;
+
+}
+
+.prix p{
+	border: 1px dotted #CC0001;
+	height: 65px;
+	border-radius: 6px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 60px;
+}
+
+.menu .titre_menu{
+	color: #CCCB00;
+	border: 0px;
+}
