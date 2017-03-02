@@ -21,8 +21,15 @@
 <div class="container-fluid" id="header"> 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="twelve columns text-center">
+
   		<div class="container-fluid" col-xs-1>
       <!--col-xs-1; style="background-color: #D43F3A; height:100px; font-size: 40px; color:yellow"> <p><b>CATALUNA PIZZA<span style="color:black; position:right">  02 02 02 02 02</span></b></p>-->
+
+
+  		<div class="container-fluid" col-xs-1; style="background-color: #CC0001; height:100px; font-size: 40px; color:yellow"> <p><b>CATALUNA PIZZA<span style="color:black; position:right">  02 02 02 02 02</span></b></p>
+
+
+
     <!-- Brand and toggle get grouped for better mobile display -->
    			<div class="navbar-header-default">
    					<a class="navbar-brand"></a>
@@ -86,7 +93,7 @@
 				<!-- Le planning-->
 				<!-- 1er jour-->
 <div class="container-fluid hidden-xs" id="trouver">	
-	<div class="row" background="brushed.png">
+	<div class="row-fluid" background="brushed.png">
   			<div class="col-sm-6 col-md-4 col-lg-2">
   			  	<div class="thumbnail text-center">
       				<img src="Imagesbis/MardiSoirmin.png" alt="MardiSoir" class="responsive">
@@ -310,10 +317,12 @@
   <div class="blocsuggest">
   <img src="Imagesbis/pizzabis.jpg" class="img-responsive" alt="Responsive image">
         <div class="description">
-  <div id="banniere_image">
-        <div id="description" id="tomate">
-        <p>Découvrez notre nouvelle recette de carbonara !</p>
-        <p>Base tomate, champignons, poivrons, olives et b&#156;uf </p>
+          <div id="banniere_image">
+           <div id="description" id="tomate">
+             <p>Découvrez notre nouvelle recette de carbonara !</p>
+            <p>Base tomate, champignons, poivrons, olives et b&#156;uf </p>
+            </div>
+          </div>
         </div>
   </div>
 
@@ -323,21 +332,21 @@
       <div class="col-xs-4">
         <div class="blocsuggest">
           <img src="Imagesbis/pizzatomate.jpg" class="img-responsive" alt="Responsive image">
-          <div class="comment"><p>Nos bases tomate</p></div>
+          <div class="comment"><a href="#tomate"><p>Nos bases tomate</p></a></div>
         </div>
       </div>
 
       <div class="col-xs-4">
         <div class="blocsuggest">
           <img src="Imagesbis/pizzacreme.jpg" class="img-responsive" alt="Responsive image">
-          <div class="comment"><p>Nos bases cr&#232;me</p></div>
+          <div class="comment"><a href="#creme"><p>Nos bases cr&#232;me</p></a></div>
         </div>
       </div>
 
       <div class="col-xs-4">
         <div class="blocsuggest">
            <img src="Imagesbis/pizzasucre.jpeg" class="img-responsive" alt="Responsive image">
-          <div class="comment"><p>Nos desserts</p></div>
+          <div class="comment"><a href="#desserts"><p>Nos desserts</p></a></div>
         </div>
       </div>
 
@@ -355,17 +364,19 @@
 <!-- MENU TOMATE-->
 <div class="container-fluid menu">
   <!-- TITRE-->
-  <div class="row titre_menu">
-    <h2 class="col-md-4 col-md-offset-3">NOS BASES TOMATES</h2>
-    <div class="col-md-5">
-      <div class="col-md-2 col-md-offset-8">
-        <p>28 cm</p>
-      </div>
-      <div class="col-md-2">
-       <p>33 cm</p>
-      </div>
-    </div>  
-  </div>
+    <div class="row titre_menu">
+    	<div class="col-md-7 des_pizza">
+      		<h2>NOS BASES TOMATES</h2>
+    	</div>
+    	<div class="col-md-5 prix">
+      		<div class="col-md-2 col-md-offset-8">
+        		<p>28 cm</p>
+      		</div>
+      		<div class="col-md-2">
+       			<p>33cm</p>
+      		</div>
+    	</div>  
+  	</div>
 
 
 <br>
@@ -416,7 +427,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Catalane</h3>
       <p>Sauce tomate, chorizo, oignons rouges, poivrons, fromage.</p>
     </div>
@@ -431,7 +442,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>L'Orientale</h3>
       <p>Sauce tomate, Merguez, oignons rouges, poivrons, fromage.</p>
     </div>
@@ -446,7 +457,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Cabra</h3>
       <p>Sauce tomate, chèvre, fromage (accompagnement au choix : miel, persillade, ciboulette).</p>
     </div>
@@ -461,7 +472,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Calzone</h3>
       <p>Sauce tomate, jambon blanc, oeuf, fromage.</p>
     </div>
@@ -476,7 +487,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La 4 fromages</h3>
       <p>Sauce tomate, bleu, parmesan, emmental, mozzarella.</p>
     </div>
@@ -491,7 +502,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>L'Hawaîenne</h3>
       <p>Sauce tomate, jambon blanc, ananas, crème fraiche.</p>
     </div>
@@ -506,7 +517,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Temperadas</h3>
       <p>Sauce tomate, jambon blanc, champignons, artichauts, poivrons, oeuf, fromage.</p>
     </div>
@@ -521,7 +532,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Végétarienne</h3>
       <p>Sauce tomate, tomate fraiche, champignons, poivrons, oignons rouges, artichauts, fromage, olives.</p>
     </div>
@@ -536,7 +547,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7" >
+    <div class="col-md-7 des_pizza" >
       <h3>La Barcelona</h3>
       <p>Sauce tomate, boeuf haché, champignons, oeuf, oignons rouges, fromage.</p>
     </div>
@@ -551,7 +562,7 @@
   </div>
 
       <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Malaga</h3>
       <p>Sauce tomate, boeuf haché, chèvre, oeuf, oignons rouges, persillade, fromage.</p>
     </div>
@@ -566,7 +577,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Mexicaine</h3>
       <p>Sauce tomate, boeuf haché chorizo, oignons rouges, persillade, oeuf, fromage.</p>
     </div>
@@ -581,7 +592,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Burger</h3>
       <p>Sauce tomate, boeuf haché, oignons rouges, cheddar, tomate fraiche, sauce burger, fromage.</p>
     </div>
@@ -596,7 +607,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>L'Andalouse</h3>
       <p>Sauce tomate, chorizo, merguez, lardons, boeuf haché, jambon blanc, oeuf, piment d'Espelette, fromage.</p>
     </div>
@@ -611,7 +622,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Flamenco</h3>
       <p>Sauce tomate, pommes de terre, jambon Serrano, oeuf, piment d'Espelette, fromage.</p>
     </div>
@@ -626,7 +637,7 @@
   </div>
 
     <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Caliente</h3>
       <p>Sauce tomate, jambon Serrano, chorizo, oeuf, piment d'Espelette, fromage.</p>
     </div>
@@ -650,16 +661,19 @@
 
 
 <!-- MENU CREME-->
-<div class="container-fluid menu">
+<div class="container-fluid menu" id="creme">
 <!-- TITRE-->
-  <div class="row titre_menu" id="creme">
-    <h2 class="col-md-4 col-md-offset-3">NOS BASES CREME</h2>
-    <div class="col-md-5">
+
+     <div class="row titre_menu">
+    <div class="col-md-7 des_pizza">
+      <h2>NOS BASES CREME</h2>
+    </div>
+    <div class="col-md-5 prix">
       <div class="col-md-2 col-md-offset-8">
         <p>28 cm</p>
       </div>
       <div class="col-md-2">
-       <p>33 cm</p>
+       <p>33cm</p>
       </div>
     </div>  
   </div>
@@ -667,7 +681,7 @@
 <br>
   <!-- PIZZAS-->
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Campesina</h3>
       <p>Crème, lardons, oignons rouges, persillade, fromage.</p>
     </div>
@@ -682,7 +696,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Coklina</h3>
       <p>Crème, poulet, chèvre, miel, fromage.</p>
     </div>
@@ -697,7 +711,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Rambla</h3>
       <p>Crème, poulet, champignons, oeuf, oignons rouges, ciboulette, fromage.</p>
     </div>
@@ -712,7 +726,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Madrilène</h3>
       <p>Crème, jambon blanc, pommes de terre, oignons rouges, oeuf, ciboulette, fromage.</p>
     </div>
@@ -727,7 +741,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Del Mar</h3>
       <p>Crème, sauson fumé, ciboulette, fromage.</p>
     </div>
@@ -742,7 +756,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Carbonara</h3>
       <p>Crème, lardons, parmesan, oeuf, ciboulette, fromage.</p>
     </div>
@@ -757,7 +771,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7" >
+    <div class="col-md-7 des_pizza">
       <h3>La Savoyarde</h3>
       <p>Crème, lardons, pommes de terre, reblochon, fromage.</p>
     </div>
@@ -772,7 +786,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Boursin</h3>
       <p>Crème, boeuf haché, pommes de terre, Boursin, persillade, fromage.</p>
     </div>
@@ -787,7 +801,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Tonno</h3>
       <p>Crème, thon, oignons rouges, fromage, olives.</p>
     </div>
@@ -805,14 +819,16 @@
 <!-- MENU DESSERT-->
 <div class="container-fluid menu">
   <!-- TITRE-->
-  <div class="row titre_menu" id="dessert">
-    <h2 class="col-md-4 col-md-offset-3">NOS PIZZAS DESSERT</h2>
-    <div class="col-md-5">
+    <div class="row titre_menu">
+    <div class="col-md-7 des_pizza">
+      <h2>NOS DESSERTS</h2>
+    </div>
+    <div class="col-md-5 prix">
       <div class="col-md-2 col-md-offset-8">
         <p>28 cm</p>
       </div>
       <div class="col-md-2">
-       <p>33 cm</p>
+       <p>33cm</p>
       </div>
     </div>  
   </div>
@@ -820,7 +836,7 @@
 <br>
   <!-- PIZZAS-->
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Sweety Poire</h3>
       <p>Crème, poire, amandes, coulis de chocolat.</p>
     </div>
@@ -835,7 +851,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Sweetie Ananas</h3>
       <p>Crème, ananas, amandes, coulis de chocolat.</p>
     </div>
@@ -850,7 +866,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Smarties</h3>
       <p>Crème, Smarties, coulis de chocolat.</p>
     </div>
@@ -865,7 +881,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-7 des_pizza">
       <h3>La Tagada</h3>
       <p>Crème, bonbons Fraises Tagada, coulis de chocolat.</p>
     </div>
@@ -936,7 +952,7 @@
           </div> 
         </div>
 
-        <div class="row bas_footer">
+        <div class="row" id="bas_footer">
           <div class="col-xs-2 col-xs-offset-1">
             <a class="footlien"  href="#"><span>Mentions légales</span></a>
           </div>
@@ -947,8 +963,9 @@
             <a class="footlien"  href="#"><span>Télécharger notre menu (PDF)</span></a>
           </div>
         </div>       
-
     </footer>  
+
+
 
   
       <!-- fin footer --> 
