@@ -237,3 +237,61 @@ footer{
 	bottom: 0;
 }
     /* Fin footer */
+
+
+
+/*MEDIA QUERRIES*/
+
+@media all and (max-device-width: 768px){
+	
+
+	/* FOOTER*/
+	footer{
+		text-align: center;
+	}
+	footer h2{
+		color: yellow;
+		font-size: 1.3em;
+		text-align: center;
+	}
+
+	.footlien{
+		color: yellow;
+		font-size: 0.9em;
+	}
+
+	footer img{
+		height: 50px;
+	}
+
+	footer span{
+		color: yellow;
+		font-size: 0.8em;
+	}
+
+	#bas_footer span{
+		text-align: center;
+	}
+
+	#bas_footer{
+		border-top: 2px dashed yellow;
+		background-color: #CC0001;
+	}
+
+
+	/*SUGGESTIONS*/
+	.description{
+		font-size: 0.4em;
+		height: 60px;
+		padding: 1px;
+	}
+
+	.grosse_img{
+		height: 200px;
+	}
+
+	#description p{
+		padding: 1px;
+	}
+}
+
