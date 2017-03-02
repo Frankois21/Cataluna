@@ -9,16 +9,17 @@
 
 body{
 	background-image: url(old_map.png);
+	padding-top: 70px; 
 }
 
-/*.header p {
+.header p {
 	font-size : calc (12px+ 2vw);
 }
-*/
+
 #biographie {
 	border: 2px dashed #CC0001;
 	border-radius: 15px;
-	margin-top: 150px;
+	margin-top: 90px;
 	font-size: 1.6em;
 	text-align: center;
 	background-color: white;
@@ -174,15 +175,18 @@ footer{
 	background-repeat: repeat;
 	color: yellow;
 	margin-top: 5px;
-
+	position: absolute;
+	width: 100%;
 }
 
 
-.bas_footer {
+#bas_footer {
 	background-color: #CC0001;
 	margin-top: 5px;
 	padding-top: 15px;
-	height: 70px;
+	height: 10%;
 	font-size: 1.3em;
+	position: relative;
+	bottom: 0;
 }
     /* Fin footer */
