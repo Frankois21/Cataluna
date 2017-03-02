@@ -15,7 +15,7 @@ a:link {
 #biographie {
 	border: 2px dashed #CC0001;
 	border-radius: 15px;
-	margin-top: 90px;
+	margin-top: 50px;
 	font-size: 1.6em;
 	text-align: center;
 	background-color: white;
@@ -130,6 +130,13 @@ h4 {
 .menu .titre_menu{
 	color: #CCCB00;
 	border: 0px;
+	text-align: right;
+	margin-bottom: 2px;
+}
+
+.titre_menu p{
+	border:0px;
+	font-size: 1.2em;
 }
 
 
@@ -176,6 +183,9 @@ h4 {
 }
 
 footer{
+
+	/*font-family: "Reenie Beanie", Helvetia, Serif;*/
+
 	font-family: Helvetia, Serif;
 	background-image: url(Imagesbis/alu_dark.png);
 	background-repeat: repeat;
