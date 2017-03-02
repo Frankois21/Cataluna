@@ -1,17 +1,12 @@
 
-/* COuleur de fond du HEADER doit être #CC0001  comme le FOOTER */
-
-
-
-
-
-
-
-body{
+body {
 	background-image: url(old_map.png);
 	padding-top: 70px; 
 }
 
+a:link {
+	text-decoration: none;
+}
 
 .header p {
 	font-size : calc (12px+ 2vw);
@@ -64,6 +59,7 @@ h4 {
 
 
 /* Suggest */
+
 .description {
 	position: absolute;
 	padding-top: 20px;
@@ -98,8 +94,8 @@ h4 {
 	color: white;
 }
 
-
 /* Fin suggest */
+
 
 /*MENU*/
 .menu{
@@ -187,7 +183,7 @@ h4 {
 }
 
 footer{
-	font-family: "Reenie Beanie", Helvetia, Serif;
+	font-family: Helvetia, Serif;
 	background-image: url(Imagesbis/alu_dark.png);
 	background-repeat: repeat;
 	color: yellow;
