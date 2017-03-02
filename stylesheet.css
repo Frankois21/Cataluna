@@ -73,7 +73,7 @@ h4 {
 	color: white;
 }
 
-.btn {
+.btn-danger{
 
 	margin-left: 12px;
 }
@@ -86,7 +86,6 @@ h4 {
 #myModalLabel {
 	color : black;
 }
-
 
 
 /* Suggest */
