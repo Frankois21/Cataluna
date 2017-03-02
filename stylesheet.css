@@ -1,7 +1,14 @@
+@font-family: 'Amatic SC', cursive;
+@font-size : 18px;
+@font-family: 'Roboto', sans-serif;
+@font-family: 'Raleway', sans-serif;
+
 
 body {
 	background-image: url(old_map.png);
 	padding-top: 70px; 
+	font-family: 'Raleway', sans-serif;
+	font-size : 15px;
 }
 
 a:link {
@@ -141,6 +148,7 @@ h4 {
 	margin-left: 25px;
 	margin-right: 10px;
 	margin-bottom: 10px;
+
 }
 
 .des_pizza h3{
@@ -216,7 +224,7 @@ footer{
 
 	/*font-family: "Reenie Beanie", Helvetia, Serif;*/
 
-	font-family: Helvetia, Serif;
+	
 	background-image: url(Imagesbis/alu_dark.png);
 	background-repeat: repeat;
 	color: yellow;
