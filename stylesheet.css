@@ -8,10 +8,42 @@ a:link {
 	text-decoration: none;
 }
 
-.header p {
-	font-size : calc (12px+ 2vw);
+
+/*HEADER*/
+
+.navbar{
+	background-color: #CC0001;
+	color: yellow;
 }
 
+.navbar p{
+	color: yellow !important;
+}
+
+.button{
+	background-color: white;
+}
+
+
+.navbar-brand{
+	color: yellow !important;
+}
+
+
+.couleur a{
+	color: yellow !important;
+}
+
+.dropdown a{
+	background-color: #CC0001;
+}
+
+.navbar img{
+	height: 25px;
+}
+
+
+/*BIOGRAPHIE*/
 #biographie {
 	border: 2px dashed #CC0001;
 	border-radius: 15px;
@@ -22,13 +54,12 @@ a:link {
 }
 
 
+/*PLANNING*/
+
 #trouver, .thumbnail {
 	background-image: url(alu_dark.png);
 	width: 100%;
 }
-
-
-
 
 .thumbnail {
 	height: 318px;
@@ -94,10 +125,10 @@ h4 {
 	color: white;
 }
 
-/* Fin suggest */
 
 
 /*MENU*/
+
 .menu{
 	border: 3px dashed #CC0001;
 	border-radius: 15px;
