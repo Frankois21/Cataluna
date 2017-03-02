@@ -5,10 +5,14 @@
 
 
 body {
+
 	background-image: url(old_map.png);
 	padding-top: 70px; 
 	font-family: 'Raleway', sans-serif;
 	font-size : 15px;
+	background-image: url(bg_main.jpg);
+	padding-top: 30px; 
+
 }
 
 a:link {
@@ -52,13 +56,21 @@ a:link {
 
 /*BIOGRAPHIE*/
 #biographie {
-	border: 2px dashed #CC0001;
+	box-shadow: 5px 5px 15px 0 #c2c2c2;
 	border-radius: 15px;
+	width: 30%;
 	margin-top: 50px;
+	margin-left: 50px;
 	font-size: 1.6em;
 	text-align: center;
 	background-color: white;
 }
+
+.img-bio{
+	margin-top: 15px;
+	height: 10%;
+}
+
 
 
 /*PLANNING*/
@@ -130,7 +142,6 @@ h4 {
 	text-align: center;
 	color: white;
 }
-
 
 
 /*MENU*/
@@ -244,3 +255,71 @@ footer{
 	bottom: 0;
 }
     /* Fin footer */
+
+
+
+/*MEDIA QUERRIES*/
+
+@media all and (max-device-width: 768px){
+	
+
+	/* FOOTER*/
+	footer{
+		text-align: center;
+	}
+	footer h2{
+		color: yellow;
+		font-size: 1.3em;
+		text-align: center;
+	}
+
+	.footlien{
+		color: yellow;
+		font-size: 0.9em;
+	}
+
+	footer img{
+		height: 50px;
+	}
+
+	footer span{
+		color: yellow;
+		font-size: 0.8em;
+	}
+
+	#bas_footer span{
+		text-align: center;
+	}
+
+	#bas_footer{
+		border-top: 2px dashed yellow;
+		background-color: #CC0001;
+	}
+
+
+	/*SUGGESTIONS*/
+	.description{
+		font-size: 0.4em;
+		height: 60px;
+		padding: 1px;
+	}
+
+	.grosse_img{
+		height: 200px;
+	}
+
+	#description p{
+		padding: 1px;
+	}
+
+
+
+}
+
+@media all and (min-device-width: 768px) and (max-device-width: 980px){
+
+	/*BIOGRAPHIE*/
+	#biographie{
+		margin-top: 70px;
+	}
+}
