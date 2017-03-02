@@ -1,7 +1,7 @@
 
 body {
-	background-image: url(old_map.png);
-	padding-top: 70px; 
+	background-image: url(bg_main.jpg);
+	padding-top: 30px; 
 }
 
 a:link {
@@ -45,13 +45,21 @@ a:link {
 
 /*BIOGRAPHIE*/
 #biographie {
-	border: 2px dashed #CC0001;
+	box-shadow: 5px 5px 15px 0 #c2c2c2;
 	border-radius: 15px;
+	width: 30%;
 	margin-top: 50px;
+	margin-left: 50px;
 	font-size: 1.6em;
 	text-align: center;
 	background-color: white;
 }
+
+.img-bio{
+	margin-top: 15px;
+	height: 10%;
+}
+
 
 
 /*PLANNING*/
@@ -123,7 +131,6 @@ h4 {
 	text-align: center;
 	color: white;
 }
-
 
 
 /*MENU*/
@@ -292,5 +299,15 @@ footer{
 	#description p{
 		padding: 1px;
 	}
+
+
+
 }
 
+@media all and (min-device-width: 768px) and (max-device-width: 980px){
+
+	/*BIOGRAPHIE*/
+	#biographie{
+		margin-top: 70px;
+	}
+}
