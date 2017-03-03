@@ -297,7 +297,8 @@ h4 {
 	.description{
 		font-size: 0.4em;
 		height: 60px;
-		padding: 1px;
+		padding-top: 10px;
+		line-height: 10px;
 	}
 
 	.grosse_img{
