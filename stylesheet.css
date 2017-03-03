@@ -131,12 +131,17 @@ h4 {
 	bottom: 0;
 	background-color: rgba(242, 12, 12, 0.4);
 }
+
 .comment p{
 	font-size: 2em;
 	text-align: center;
 	color: white;
 }
 
+.comment:hover{
+	background-color: rgba(204, 0, 1, 0.9);
+	transition: 0.5s;
+}
 
 /*MENU*/
 
