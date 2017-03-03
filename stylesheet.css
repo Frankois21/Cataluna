@@ -165,7 +165,13 @@ h4 {
 	
 }
 
+.ancre{
+	height: 30px;
+}
 
+#dessert {
+	margin-bottom: 30px;
+}
 
 /*Trait rouge*/
 .fond_blanc{
