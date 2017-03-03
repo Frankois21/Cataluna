@@ -187,7 +187,37 @@ h4 {
 }
 
 
+/*Trait rouge*/
+.fond_blanc{
+	background-image: url(bg_main.jpg);
+	height: 30px;
+	padding: 12px;
+	border-top: 0px;
+}
+
+.trait_rouge{
+	border-top: 2px dashed #CC0001;
+}
+
+
 /*INFOS PIZZAS*/
+
+#infos_pizz{
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border-right: 3px inset #CC0001;
+	border-left: 3px outset #CC0001;
+	border-radius: 30px;
+	background-color: white;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.2em;
+}
+
+/*INFOS PIZZAS
 
 #infos_pizz{
 	text-align: center;
@@ -201,9 +231,40 @@ h4 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 1.4em;
-}
+}*/
+
 
 /*EVENEMENTS*/
+#evenement{
+	background-image: url(alu_dark_bandeau.png);
+	font-size: 1.4em;
+}
+
+.des_evenement h3{
+	color: white;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.des_evenement p{
+	color: white;
+	text-align: center;
+}
+
+
+/*Trait jaune*/
+.fond_gris{
+	background-image: url(alu_dark_bandeau.png);
+	height: 30px;
+	padding: 12px;
+}
+
+.trait{
+	border-top: 2px dashed yellow;
+}
+
+
+/*EVENEMENTS
 #evenement{
 	border: 3px dashed #CC0001;
 	border-radius: 20px;
@@ -222,38 +283,12 @@ h4 {
 	padding: 20px;
 	padding-left: 40px;
 }
-
+*/
 
 /* Footer */
-.footlien{
-	text-decoration: none;
+.footer a{
 	color: yellow;
 }
-
-footer{
-
-	/*font-family: "Reenie Beanie", Helvetia, Serif;*/
-
-	font-family: Helvetia, Serif;
-	background-image: url(Imagesbis/alu_dark.png);
-	background-repeat: repeat;
-	color: yellow;
-	margin-top: 5px;
-	position: absolute;
-	width: 100%;
-}
-
-
-#bas_footer {
-	background-color: #CC0001;
-	margin-top: 5px;
-	padding-top: 15px;
-	height: 10%;
-	font-size: 1.3em;
-	position: relative;
-	bottom: 0;
-}
-    /* Fin footer */
 
 
 
