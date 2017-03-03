@@ -1,13 +1,10 @@
+
 @font-family: 'Amatic SC', cursive;
 @font-size : 18px;
-@font-family: 'Roboto', sans-serif;
 @font-family: 'Raleway', sans-serif;
 
 
 body {
-
-	background-image: url(old_map.png);
-	padding-top: 70px; 
 	font-family: 'Raleway', sans-serif;
 	font-size : 15px;
 	background-image: url(bg_main.jpg);
@@ -57,11 +54,12 @@ a:link {
 /*BIOGRAPHIE*/
 #biographie {
 	box-shadow: 5px 5px 15px 0 #c2c2c2;
-	border-radius: 15px;
+	border-radius: 7px;
 	width: 30%;
-	margin-top: 50px;
+	margin-top: 80px;
 	margin-left: 50px;
-	font-size: 1.6em;
+	padding: 8px;
+	font-size: 19px;
 	text-align: center;
 	background-color: white;
 }
@@ -82,13 +80,12 @@ a:link {
 
 .thumbnail {
 	height: 318px;
+	font-family : 'Raleway', sans-serif;
 	border : 0px;
-	font-family: 'Raleway', sans-serif;
 }
 
 h4 {
-	font-size : 23px;
-	font-weight : bold;
+	font-size : 19px;
 	color: white;
 }
 
@@ -108,6 +105,7 @@ h4 {
 #myModalLabel {
 	color : black;
 }
+
 
 
 /* Suggest */
@@ -153,47 +151,35 @@ h4 {
 }
 
 /*MENU*/
-
-.menu{
-	border: 3px dashed #CC0001;
-	border-radius: 15px;
-	margin-top: 25px;
-	background-color: white;
-}
-
-.menu .row{
-	border: 1px dotted #CC0001;
-	border-radius: 10px;
-	margin-left: 25px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-
-}
-
-.des_pizza h3{
-	font-weight: bold;
-
-}
-
-.prix p{
-	border: 1px dotted #CC0001;
-	height: 65px;
-	border-radius: 6px;
-	margin-top: 10px;
+.titre_menu{
+	background-color: rgba(242, 12, 12, 0.4);
+	color: white;
 	text-align: center;
-	line-height: 60px;
 }
 
-.menu .titre_menu{
-	color: #CCCB00;
-	border: 0px;
-	text-align: right;
-	margin-bottom: 2px;
+.pizza{
+	border-left: 1px outset #CC0001;
+	border-right: 1px inset #CC0001;
+	height: 160px;
+	padding: 1px;
+	font-size: 14px;
+	line-height: 15px;
+	margin-bottom: 25px;
+	
 }
 
-.titre_menu p{
-	border:0px;
-	font-size: 1.2em;
+
+
+/*Trait rouge*/
+.fond_blanc{
+	background-image: url(bg_main.jpg);
+	height: 30px;
+	padding: 12px;
+	border-top: 0px;
+}
+
+.trait_rouge{
+	border-top: 2px dashed #CC0001;
 }
 
 
@@ -201,68 +187,55 @@ h4 {
 
 #infos_pizz{
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 5px;
 	margin-bottom: 20px;
-	border: 3px dashed yellow;
+	border-right: 3px inset #CC0001;
+	border-left: 3px outset #CC0001;
 	border-radius: 30px;
 	background-color: white;
 	padding-left: 60px;
 	padding-right: 60px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	font-size: 1.2em;
 }
+
 
 /*EVENEMENTS*/
 #evenement{
-	border: 3px dashed #CC0001;
-	border-radius: 20px;
+	background-image: url(alu_dark_bandeau.png);
+	font-size: 1.4em;
+}
+
+.des_evenement h3{
+	color: white;
 	font-size: 1.2em;
-	background-color: white;
-	margin-bottom: 20px;
+	text-align: center;
 }
 
-#evenements h3{
-	color: black;
-	font-size: 1.3em;
+.des_evenement p{
+	color: white;
+	text-align: center;
 }
 
-.separateur{
-	border-left: 2px dashed black;
-	padding: 20px;
-	padding-left: 40px;
+
+/*Trait jaune*/
+.fond_gris{
+	background-image: url(alu_dark_bandeau.png);
+	height: 30px;
+	padding: 12px;
 }
+
+.trait{
+	border-top: 2px dashed yellow;
+}
+
 
 
 /* Footer */
-.footlien{
-	text-decoration: none;
+.footer a{
 	color: yellow;
 }
-
-footer{
-
-	/*font-family: "Reenie Beanie", Helvetia, Serif;*/
-
-	
-	background-image: url(Imagesbis/alu_dark.png);
-	background-repeat: repeat;
-	color: yellow;
-	margin-top: 5px;
-	position: absolute;
-	width: 100%;
-}
-
-
-#bas_footer {
-	background-color: #CC0001;
-	margin-top: 5px;
-	padding-top: 15px;
-	height: 10%;
-	font-size: 1.3em;
-	position: relative;
-	bottom: 0;
-}
-    /* Fin footer */
 
 
 
@@ -304,6 +277,11 @@ footer{
 		background-color: #CC0001;
 	}
 
+	.pizza{
+		height: 130px;
+		margin-bottom: 5px;
+		border-bottom: 1px inset #CC0001;
+	}
 
 	/*SUGGESTIONS*/
 	.description{
