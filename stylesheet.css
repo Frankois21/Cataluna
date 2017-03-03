@@ -148,48 +148,23 @@ h4 {
 }
 
 /*MENU*/
-
-.menu{
-	border: 3px dashed #CC0001;
-	border-radius: 15px;
-	margin-top: 25px;
-	background-color: white;
-}
-
-.menu .row{
-	border: 1px dotted #CC0001;
-	border-radius: 10px;
-	margin-left: 25px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-
-}
-
-.des_pizza h3{
-	font-weight: bold;
-
-}
-
-.prix p{
-	border: 1px dotted #CC0001;
-	height: 65px;
-	border-radius: 6px;
-	margin-top: 10px;
+.titre_menu{
+	background-color: rgba(242, 12, 12, 0.4);
+	color: white;
 	text-align: center;
-	line-height: 60px;
 }
 
-.menu .titre_menu{
-	color: #CCCB00;
-	border: 0px;
-	text-align: right;
-	margin-bottom: 2px;
+.pizza{
+	border-left: 1px outset #CC0001;
+	border-right: 1px inset #CC0001;
+	height: 160px;
+	padding: 1px;
+	font-size: 14px;
+	line-height: 15px;
+	margin-bottom: 25px;
+	
 }
 
-.titre_menu p{
-	border:0px;
-	font-size: 1.2em;
-}
 
 
 /*Trait rouge*/
