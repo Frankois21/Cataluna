@@ -1,11 +1,15 @@
+
+@font-family: 'Amatic SC', cursive;
+@font-size : 18px;
 @font-family: 'Raleway', sans-serif;
 
 
 body {
 	font-family: 'Raleway', sans-serif;
-	font-size: 14px; 
+	font-size : 15px;
 	background-image: url(bg_main.jpg);
 	padding-top: 30px; 
+
 }
 
 a:link {
@@ -158,6 +162,7 @@ h4 {
 	margin-left: 25px;
 	margin-right: 10px;
 	margin-bottom: 10px;
+
 }
 
 .des_pizza h3{
@@ -217,22 +222,6 @@ h4 {
 	font-size: 1.2em;
 }
 
-/*INFOS PIZZAS
-
-#infos_pizz{
-	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border: 3px dashed yellow;
-	border-radius: 30px;
-	background-color: white;
-	padding-left: 60px;
-	padding-right: 60px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 1.4em;
-}*/
-
 
 /*EVENEMENTS*/
 #evenement{
@@ -264,26 +253,6 @@ h4 {
 }
 
 
-/*EVENEMENTS
-#evenement{
-	border: 3px dashed #CC0001;
-	border-radius: 20px;
-	font-size: 1.4em;
-	background-color: white;
-	margin-bottom: 20px;
-}
-
-#evenements h3{
-	color: black;
-	font-size: 1.3em;
-}
-
-.separateur{
-	border-left: 2px dashed black;
-	padding: 20px;
-	padding-left: 40px;
-}
-*/
 
 /* Footer */
 .footer a{
