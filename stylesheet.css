@@ -1,5 +1,9 @@
+@font-family: 'Raleway', sans-serif;
+
 
 body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px; 
 	background-image: url(bg_main.jpg);
 	padding-top: 30px; 
 }
@@ -50,7 +54,7 @@ a:link {
 	width: 30%;
 	margin-top: 50px;
 	margin-left: 50px;
-	font-size: 1.6em;
+	font-size: 1.4em;
 	text-align: center;
 	background-color: white;
 }
@@ -94,6 +98,7 @@ h4 {
 #myModalLabel {
 	color : black;
 }
+
 
 
 /* Suggest */
@@ -190,13 +195,14 @@ h4 {
 	padding-right: 60px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	font-size: 1.4em;
 }
 
 /*EVENEMENTS*/
 #evenement{
 	border: 3px dashed #CC0001;
 	border-radius: 20px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	background-color: white;
 	margin-bottom: 20px;
 }
