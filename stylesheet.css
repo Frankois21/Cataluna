@@ -92,7 +92,7 @@ h4 {
 }
 
 .btn-danger{
-
+	background-color: #CC0001;
 	margin-left: 12px;
 }
 
@@ -153,7 +153,7 @@ h4 {
 
 /*MENU*/
 .titre_menu{
-	background-color: rgba(242, 12, 12, 0.4);
+	background-color: #CC0001;
 	color: white;
 	text-align: center;
 }
@@ -163,14 +163,21 @@ h4 {
 }
 
 .pizza{
-	border-left: 1px outset #CC0001;
-	border-right: 1px inset #CC0001;
+	border-left: 1px solid #CC0001;
+	border-right: 1px solid #CC0001;
 	height: 160px;
 	padding: 1px;
 	font-size: 14px;
 	line-height: 15px;
 	margin-bottom: 25px;
 	
+}
+.pizza h3{
+	color: #CC0001;
+}
+
+.prix{
+	font-weight: bold;
 }
 
 .ancre{
