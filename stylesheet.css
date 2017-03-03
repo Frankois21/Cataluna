@@ -105,7 +105,9 @@ h4 {
 	color : black;
 }
 
-
+#carroussel{
+	margin-bottom: 5px;
+}
 
 /* Suggest */
 
@@ -338,6 +340,7 @@ h4 {
 		font-size: 0.4em;
 		height: 60px;
 		padding: 3px;
+
 	}
 
 	.comment p{
