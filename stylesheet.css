@@ -82,8 +82,8 @@ a:link {
 
 .thumbnail {
 	height: 318px;
-	font-family : 'Reenie Beanie', cursive;
 	border : 0px;
+	font-family: 'Raleway', sans-serif;
 }
 
 h4 {
@@ -94,12 +94,15 @@ h4 {
 
 .btn-danger{
 
-	margin-left: 12px;
+	margin-left: ;
+
 }
+
 
 #trouver p {
 	position: absolute;
 	bottom : 0;
+
 }
 
 #myModalLabel {
