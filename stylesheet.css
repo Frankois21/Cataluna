@@ -54,11 +54,12 @@ a:link {
 /*BIOGRAPHIE*/
 #biographie {
 	box-shadow: 5px 5px 15px 0 #c2c2c2;
-	border-radius: 15px;
+	border-radius: 7px;
 	width: 30%;
-	margin-top: 50px;
+	margin-top: 80px;
 	margin-left: 50px;
-	font-size: 1.4em;
+	padding: 8px;
+	font-size: 19px;
 	text-align: center;
 	background-color: white;
 }
@@ -79,13 +80,12 @@ a:link {
 
 .thumbnail {
 	height: 318px;
-	font-family : 'Reenie Beanie', cursive;
+	font-family : 'Raleway', sans-serif;
 	border : 0px;
 }
 
 h4 {
-	font-size : 23px;
-	font-weight : bold;
+	font-size : 19px;
 	color: white;
 }
 
@@ -274,6 +274,11 @@ h4 {
 		background-color: #CC0001;
 	}
 
+	.pizza{
+		height: 130px;
+		margin-bottom: 5px;
+		border-bottom: 1px inset #CC0001;
+	}
 
 	/*SUGGESTIONS*/
 	.description{
