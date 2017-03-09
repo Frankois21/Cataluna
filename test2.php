@@ -14,7 +14,7 @@ $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix
 $res = mysqli_query($bdd, $req);
 
 
-$reqligne = "SELECT COUNT(base) FROM cataluna.pizza WHERE base = 'dessert'";
+$reqligne = "SELECT COUNT(base) FROM cataluna.pizza WHERE base = 'tomate'";
 $resligne = mysqli_query($bdd, $reqligne);
 $row = mysqli_fetch_row($resligne);
 
@@ -30,9 +30,9 @@ echo '<div class="ancre hidden-xs" id="dessert"></div>
 
 echo '<div class="row">';
 while($data = mysqli_fetch_assoc($res)) {
-    if ($data['base'] == 'dessert') {
-            if ($row[0] <= 5){
-                echo '<div class="col-sm-6 col-md-4 col-lg-4 pizza">';
+    if ($data['base'] == 'tomate') {
+            if ($row[0] < 5){
+                echo '<div class="col-sm-6 col-md-4 col-lg-3 pizza">';
             } else echo '<div class="col-sm-6 col-md-4 col-lg-2 pizza">';
 
             echo '<div class="text-center">

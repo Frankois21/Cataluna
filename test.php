@@ -15,8 +15,6 @@ $res = mysqli_query($bdd, $req);
 
 
 
-                $value="'.$nom.'";
-
 echo '<div class="ancre hidden-xs" id="tomate"></div>
 <div class="titre_menu">
     <h2>Nos bases tomate</h2>
