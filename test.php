@@ -35,6 +35,7 @@ echo '<div class="row">';
     </div>';
         }
     }
+    mysqli_data_seek($res, 0);
 echo '
 </div>
 </div>';
@@ -61,6 +62,7 @@ while($data = mysqli_fetch_assoc($res)) {
     </div>';
     }
 }
+mysqli_data_seek($res, 0);
 echo '
 </div>
 </div>';

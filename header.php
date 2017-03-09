@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/toro.jpg" />
 </head>
 <body>
 
