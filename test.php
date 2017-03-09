@@ -14,7 +14,7 @@
                                       WHERE id=$id";
                 echo $req;
 
-                value="'.$nom.'"
+                $value="'.$nom.'";
 
             if (mysqli_query($bdd, $req)) {
                 header('Location: admin.php');

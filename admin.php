@@ -5,7 +5,6 @@
 
 mysqli_set_charset($bdd,"utf8");
 
-
 $nom = $ingredients = $base = $petit_prix = $grand_prix = $cache = $id='';
 
 
@@ -44,7 +43,7 @@ if (!empty($_POST)) {
                                           base='$base',
                                           petit_prix='$petit_prix',
                                           grand_prix='$grand_prix',        
-                                      WHERE id=$id";
+                                      WHERE id='$id'";
             //echo $req;
 
         } else {
@@ -53,7 +52,7 @@ if (!empty($_POST)) {
             //echo $req;
         }
 
-        if (!mysqli_query($bdd, $req)){
+        if (mysqli_query($bdd, $req)){
             echo mysqli_error($bdd);
         } else {
             header('Location: admin.php');

@@ -1,0 +1,15 @@
+INSERT INTO cataluna.pizza (nom, ingredients, petit_prix, grand_prix, type, cache) 
+VALUES 
+('La campesina',"Crème, lardons, oignons rouges, persillade, fromage",'7.5','10','Crème','0'),
+('La Coklina',"Crème, poulet, chèvre, miel, fromage",'9.3','12.5','Crème','0'),
+('La Rambla',"Crème, poulet, champignons, oeuf, oignons rouges, ciboulette, fromage",'9','12','Crème','0'),
+('La Madrilène',"Crème, jambon blanc, pommes de terre, oignons rouges, oeuf, ciboulette, fromage",'9','12','Crème','0'),
+('La Del Mar',"Crème, sauson fumé, ciboulette, fromage",'10.1','13.5','Crème','0'),
+('La Carbonara',"Crème, lardons, parmesan, oeuf, ciboulette, fromage",'8.2','11','Crème','0'),
+('La savoyarde',"Crème, lardons, pommes de terre, reblochon, fromage",'9.7','13','Crème','0'),
+('La Boursin',"Crème, boeuf haché, pommes de terre, Boursin, persillade, fromage,",'10.1','13.5','Crème','0'),
+('La Tonno',"Crème, thon, oignons rouges, fromage, olives,,",'9','12','Crème','0'),
+('La sweety Poire',"Crème, poire, amandes, coulis de chocolat",'6.7','9','dessert','0'),
+('La sweetie ananas',"Crème, ananas, amandes, coulis de chocolat",'6.7','9','dessert','0'),
+('La smarties',"Crème, Smarties, coulis de chocolat",'7.5','10','dessert','0'),
+('la tagada',"Crème, bonbons Fraises tagada, coulis de chocolat",'7.5','10','dessert','0');
