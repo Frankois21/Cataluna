@@ -77,8 +77,17 @@ FROM pizza WHERE cache = 0 ORDER BY petit_prix";
 $res = mysqli_query($bdd, $req);
 
 
+$reqtomate = "SELECT COUNT(base) FROM cataluna.pizza WHERE base = 'tomate'";
+$restomate = mysqli_query($bdd, $reqtomate);
+$rowtomate = mysqli_fetch_row($restomate);
 
+$reqcreme = "SELECT COUNT(base) FROM cataluna.pizza WHERE base = 'creme'";
+$rescreme = mysqli_query($bdd, $reqcreme);
+$rowcreme = mysqli_fetch_row($rescreme);
 
+$reqdessert = "SELECT COUNT(base) FROM cataluna.pizza WHERE base = 'dessert'";
+$resdessert = mysqli_query($bdd, $reqdessert);
+$rowdessert = mysqli_fetch_row($resdessert);
 
 echo '<div class="ancre hidden-xs" id="tomate"></div>
 <div class="titre_menu">
@@ -89,21 +98,22 @@ echo '<div class="ancre hidden-xs" id="tomate"></div>
 
 
 echo '<div class="row">';
-    while($data = mysqli_fetch_assoc($res)) {
+while($data = mysqli_fetch_assoc($res)) {
     if ($data['base'] == 'tomate') {
-    echo '
+        if ($rowtomate[0] < 5){
+            echo '<div class="col-sm-6 col-md-4 col-lg-3 pizza">';
+        } else echo '<div class="col-sm-6 col-md-4 col-lg-2 pizza">';
 
-    <div class="col-sm-6 col-md-4 col-lg-2 pizza">
-        <div class="text-center">
-            <h3>' . $data['nom'] . '</h3>
-            <p>' . $data['ingredients'] . '</p>
-            <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
-        </div>
-    </div>';
+        echo '<div class="text-center">
+                <h3>' . $data['nom'] . '</h3>
+                <p>' . $data['ingredients'] . '</p>
+                <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
+            </div>
+                </div>';
     }
-    }
-    mysqli_data_seek($res, 0);
-    echo '
+}
+mysqli_data_seek($res, 0);
+echo '
 </div>
 </div>';
 
@@ -116,21 +126,22 @@ echo '<div class="ancre hidden-xs" id="creme"></div>
 
 
 echo '<div class="row">';
-    while($data = mysqli_fetch_assoc($res)) {
+while($data = mysqli_fetch_assoc($res)) {
     if ($data['base'] == 'creme') {
-    echo '
+        if ($rowcreme[0] < 5){
+            echo '<div class="col-sm-6 col-md-4 col-lg-3 pizza">';
+        } else echo '<div class="col-sm-6 col-md-4 col-lg-2 pizza">';
 
-    <div class="col-sm-6 col-md-4 col-lg-4 pizza">
-        <div class="text-center">
-            <h3>' . $data['nom'] . '</h3>
-            <p>' . $data['ingredients'] . '</p>
-            <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
-        </div>
-    </div>';
+        echo '<div class="text-center">
+                <h3>' . $data['nom'] . '</h3>
+                <p>' . $data['ingredients'] . '</p>
+                <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
+            </div>
+                </div>';
     }
-    }
-    mysqli_data_seek($res, 0);
-    echo '
+}
+mysqli_data_seek($res, 0);
+echo '
 </div>
 </div>';
 
@@ -142,20 +153,22 @@ echo '<div class="ancre hidden-xs" id="dessert"></div>
 
 
 echo '<div class="row">';
-    while($data = mysqli_fetch_assoc($res)) {
+while($data = mysqli_fetch_assoc($res)) {
     if ($data['base'] == 'dessert') {
-    echo '
+        if ($rowdessert[0] < 5){
+            echo '<div class="col-sm-6 col-md-4 col-lg-3 pizza">';
+        } else echo '<div class="col-sm-6 col-md-4 col-lg-2 pizza">';
 
-    <div class="col-sm-6 col-md-4 col-lg-4 pizza">
-        <div class="text-center">
-            <h3>' . $data['nom'] . '</h3>
-            <p>' . $data['ingredients'] . '</p>
-            <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
-        </div>
-    </div>';
+        echo '<div class="text-center">
+                <h3>' . $data['nom'] . '</h3>
+                <p>' . $data['ingredients'] . '</p>
+                <p class="prix">' . $data['petit_prix'] . ' €  - ' . $data['grand_prix'] . ' €</p>
+            </div>
+                </div>';
     }
-    }
-    echo '
+}
+
+echo '
 </div>
 </div>';
 ?>
