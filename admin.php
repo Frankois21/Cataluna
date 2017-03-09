@@ -72,7 +72,7 @@ $tab_base = ['Tomate' => 'tomate',
 
 
 
-echo ' <!-- FORMULAIRE--> <h2 class="text-center">Ajouter une pizza</h2>
+echo ' <!-- FORMULAIRE--> <h2 class="text-center titre_admin">Ajouter une pizza</h2>
 <br>';
 
 echo ' <form method="POST" action="admin.php" class="form-horizontal">
@@ -142,9 +142,14 @@ echo '    <div class="form-group">
     </div>
 </form>';
 
+echo '  <div class="row" >
+      <div class="trait_jaune">
+      <div class="fond_gris">
+        <div class="trait"></div>
+      </div>
+    </div>';
 
-
-echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center">Modifier une pizza</h2>
+echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center titre_admin">Modifier une pizza</h2>
 <br>';
 
 $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix 

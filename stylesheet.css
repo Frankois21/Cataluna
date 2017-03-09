@@ -169,7 +169,7 @@ h4 {
 	padding: 1px;
 	font-size: 14px;
 	line-height: 15px;
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 	
 }
 .pizza h3{
@@ -256,6 +256,16 @@ h4 {
 #mentions span {
 
 	color : black;
+}
+
+/* admin */
+
+.titre_admin{
+	color: #CC0001;
+}
+
+.bouton {
+	margin-bottom: 30px;
 }
 
 /*MEDIA QUERRIES*/

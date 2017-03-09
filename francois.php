@@ -92,30 +92,6 @@ echo ' <form method="POST" action="admin.php" class="form-horizontal">
 ';
 
 echo '    <div class="form-group">
-        <label for="ingredients" class="col-sm-2 control-label">Type</label>    
-        <div class="col-sm-10">';
-
-foreach ($tab_base as $label => $value)
-{
-    $checked = '';
-    if ($base == $value) {
-        $checked = 'checked="checked"';
-    }
-
-    echo '
-            
-            <div class="radio">
-                <label for="'.$value.'">'.$label.'</label>
-                    <input class="form-control" required type="radio" name="base"  value="'.$value.'" id="'.$value.'" '.$checked.'/>
-                    
-            </div>';
-
-};
-
-echo '</div>    
-';
-
-echo '    <div class="form-group">
         <label class="col-sm-2 control-label" for="petit_prix">Prix 28cm</label>
         <div class="input-group col-sm-2">
             <div class="input-group-addon">€</div>
@@ -130,15 +106,39 @@ echo '    <div class="form-group">
             <input type="text" class="form-control" name="grand_prix" value="'.$grand_prix.'" id="grand_prix" placeholder="10.00">
         </div>
     </div>
+';
+
+echo '    <div class="form-group">
+        <label for="ingredients" class="col-sm-2 control-label">Type</label>    
+        <div class="col-sm-3">';
+
+foreach ($tab_base as $label => $value)
+{
+    $checked = '';
+    if ($base == $value) {
+        $checked = 'checked="checked"';
+    }
+
+    echo '
+           <div class="radio">
+                <label for="'.$value.'">'.$label.'</label>
+                <input class="form-control" required type="radio" name="base"  value="'.$value.'" id="'.$value.'" '.$checked.'/>
+                    
+           </div>';
+
+};
+
+echo '</div>    
 
 
-    <input type="hidden" name="id" value="\'.$id.\'"/>
+     <input type="hidden" name="id" value="'.$id.'"/>
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button type="submit" class="btn btn-default" name="btnSubmit">Envoyer</button>
         </div>
     </div>
+ 
 </form>';
 
 
@@ -154,31 +154,34 @@ $res = mysqli_query($bdd, $req);
 echo '<div class="row">';
 while($data = mysqli_fetch_assoc($res))
 {
-    echo '<div class="col-sm-6 col-md-4 col-lg-4 pizza">
+    echo '<div class="col-sm-6 col-md-4 col-lg-3 pizza">
       <div class="text-center">
-          <h3>'.$data['nom'].'</h3>
+          <h3><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>'.$data['nom'].'</h3>
           <p>'.$data['ingredients'].'</p>
           <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
-          
-          <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
+      </div>
+      <div class="row">    
+          <form  class="col-sm-2 col-sm-offset-1" method="POST" action="deletepizza.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
             <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
           </form>
                       
+          <form  class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+            <input type="hidden" name="id" value="'.$data['id'].'"/>
+            <input  class="btn btn-default" type="submit" value="Masquer" name="cache"/>
+          </form>
+                      
           <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
-            
-            <div class="checkbox">
-    <label>
-      <input type="checkbox"> masqué
-    </label>
+            <a href="admin.php?id='.$data['id'].'" class="btn btn-warning">Modifier</a>
+           
+
+
   </div>
             
-            
-          </form>
-      </div>  
-    </div>';
+      </form>
+  </div>  
+</div>';
 }
 
 

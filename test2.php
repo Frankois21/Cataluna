@@ -9,7 +9,7 @@ $bdd = mysqli_connect(SERVER, USER, PASS, DB);
 
 mysqli_set_charset($bdd,"utf8");
 
-$req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix 
+$req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache 
             FROM pizza";
 $res = mysqli_query($bdd, $req);
 
@@ -47,5 +47,4 @@ while($data = mysqli_fetch_assoc($res)) {
 echo '
 </div>
 </div>';
-
 
