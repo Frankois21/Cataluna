@@ -73,7 +73,7 @@ include 'planning.php';
 
 <?PHP
 $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix
-FROM pizza ORDER BY petit_prix";
+FROM pizza WHERE cache = 0 ORDER BY petit_prix";
 $res = mysqli_query($bdd, $req);
 
 

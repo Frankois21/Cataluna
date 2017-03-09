@@ -166,7 +166,7 @@ while($data = mysqli_fetch_assoc($res))
           <p>'.$data['ingredients'].'</p>
           <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
           
-          <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
+         <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
             <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
           </form>
