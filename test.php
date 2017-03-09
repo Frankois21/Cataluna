@@ -14,11 +14,15 @@ $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix
 $res = mysqli_query($bdd, $req);
 
 
+
+                $value="'.$nom.'";
+
 echo '<div class="ancre hidden-xs" id="tomate"></div>
 <div class="titre_menu">
     <h2>Nos bases tomate</h2>
     <p>Disponibles en 28cm et 33cm</p>
 </div>';
+
 
 
 echo '<div class="row">';

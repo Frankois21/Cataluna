@@ -1,27 +1,27 @@
 <?php
-    include 'header.php';
-    include 'connect.php';
-    $bdd = mysqli_connect(SERVER, USER, PASS, DB);
+include 'header.php';
+include 'connect.php';
+$bdd = mysqli_connect(SERVER, USER, PASS, DB);
 
 mysqli_set_charset($bdd,"utf8");
 
 $nom = $ingredients = $base = $petit_prix = $grand_prix = $cache = $id='';
 
 
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-        $req = "SELECT * FROM pizza WHERE id=$id";
-        $res = mysqli_query($bdd, $req);
-        while ($data = mysqli_fetch_assoc($res)) {
-            $nom = $data['nom'];
-            $ingredients = $data['ingredients'];
-            $base = $data['base'];
-            $petit_prix = $data['petit_prix'];
-            $grand_prix = $data['grand_prix'];
+    $req = "SELECT * FROM pizza WHERE id=$id";
+    $res = mysqli_query($bdd, $req);
+    while ($data = mysqli_fetch_assoc($res)) {
+        $nom = $data['nom'];
+        $ingredients = $data['ingredients'];
+        $base = $data['base'];
+        $petit_prix = $data['petit_prix'];
+        $grand_prix = $data['grand_prix'];
 
-        }
     }
+}
 
 if (!empty($_POST)) {
     foreach ($_POST as $key => $data) {
@@ -63,8 +63,8 @@ if (!empty($_POST)) {
 
 
 $tab_base = ['Tomate' => 'tomate',
-              'Creme' => 'creme',
-                'Dessert' => 'dessert'];
+    'Creme' => 'creme',
+    'Dessert' => 'dessert'];
 
 
 
@@ -95,24 +95,24 @@ echo '    <div class="form-group">
         <label for="ingredients" class="col-sm-2 control-label">Type</label>    
         <div class="col-sm-10">';
 
-            foreach ($tab_base as $label => $value)
-            {
-                $checked = '';
-               if ($base == $value) {
-                   $checked = 'checked="checked"';
-              }
+foreach ($tab_base as $label => $value)
+{
+    $checked = '';
+    if ($base == $value) {
+        $checked = 'checked="checked"';
+    }
 
-                echo '
+    echo '
             
             <div class="radio">
                 <label for="'.$value.'">'.$label.'</label>
                     <input class="form-control" required type="radio" name="base"  value="'.$value.'" id="'.$value.'" '.$checked.'/>
-                
+                    
             </div>';
 
-            };
+};
 
-        echo '</div>    
+echo '</div>    
 ';
 
 echo '    <div class="form-group">
@@ -132,7 +132,7 @@ echo '    <div class="form-group">
     </div>
 
 
-    <input type="hidden" name="id" value="'.$id.'"/>
+    <input type="hidden" name="id" value="\'.$id.\'"/>
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
@@ -168,6 +168,14 @@ while($data = mysqli_fetch_assoc($res))
           <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
             <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
+            
+            <div class="checkbox">
+    <label>
+      <input type="checkbox"> masqué
+    </label>
+  </div>
+            
+            
           </form>
       </div>  
     </div>';
