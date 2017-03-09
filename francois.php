@@ -42,7 +42,7 @@ if (!empty($_POST)) {
                                           ingredients='$ingredients',
                                           base='$base',
                                           petit_prix='$petit_prix',
-                                          grand_prix='$grand_prix' ,       
+                                          grand_prix='$grand_prix'    
                                       WHERE id='$id'";
             echo $req;
 
@@ -56,7 +56,7 @@ if (!empty($_POST)) {
         if (mysqli_query($bdd, $req)){
             echo mysqli_error($bdd);
         } else {
-            header('Location: admin.php');
+            header('Location: francois.php');
         }
     }
 }
@@ -162,21 +162,39 @@ while($data = mysqli_fetch_assoc($res))
           
           <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
+            
+            
+ <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+         Delete
+        </button>
+
+<!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;&times;&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Suppression pizza</h4>
+                      </div>
+                      <div class="modal-body">
+                        Etes-vous sûr de supprimer la pizza '.$data['nom'].' ? 
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">"Oups noooon</button>
+                        <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
+            <input type="hidden" name="id" value="'.$data['id'].'"/>
+                        <input  class="btn btn-danger" type="submit" value="On y va" name="delete"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
           </form>
                       
-          <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
-            <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
-            
-            <div class="checkbox">
-    <label>
-      <input type="checkbox"> masqué
-    </label>
-  </div>
-            
-            
-          </form>
+              <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+                <input type="hidden" name="id" value="'.$data['id'].'"/>
+                <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
+              </form>
       </div>  
     </div>';
 }
@@ -184,4 +202,5 @@ while($data = mysqli_fetch_assoc($res))
 
 
 echo '</div>';
+include 'footer.php';
 ?>
