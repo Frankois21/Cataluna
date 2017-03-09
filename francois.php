@@ -44,7 +44,7 @@ if (!empty($_POST)) {
                                           petit_prix='$petit_prix',
                                           grand_prix='$grand_prix'    
                                       WHERE id='$id'";
-            echo $req;
+           // echo $req;
 
 
         } else {
@@ -175,7 +175,7 @@ while($data = mysqli_fetch_assoc($res))
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;&times;&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Suppression pizza</h4>
+                        <h4 class="modal-title" id="myModalLabel" value="'.$data['nom'].'">Suppression pizza</h4>
                       </div>
                       <div class="modal-body">
                         Etes-vous sûr de supprimer la pizza '.$data['nom'].' ? 
@@ -183,7 +183,7 @@ while($data = mysqli_fetch_assoc($res))
                       <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">"Oups noooon</button>
                         <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
-            <input type="hidden" name="id" value="'.$data['id'].'"/>
+                            <input type="hidden" name="id" value="'.$data['id'].'"/>
                         <input  class="btn btn-danger" type="submit" value="On y va" name="delete"/>
                       </div>
                     </div>
@@ -207,17 +207,11 @@ while($data = mysqli_fetch_assoc($res))
             
 
                       
-              <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
-                <input type="hidden" name="id" value="'.$data['id'].'"/>
-                <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
-              </form>
-      </div>  
-    </div>';
 
 }
 
 
-
-echo '</div>';
+echo '
+    </div>';
 include 'footer.php';
 ?>
