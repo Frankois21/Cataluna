@@ -47,6 +47,7 @@ if (!empty($_POST)) {
             //echo $req;
 
 
+
         } else {
             $req = "INSERT INTO pizza (nom, ingredients, base, petit_prix, grand_prix)
                         VALUES ('$nom', '$ingredients', '$base', '$petit_prix', '$grand_prix')";
