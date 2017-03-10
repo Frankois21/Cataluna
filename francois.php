@@ -162,7 +162,7 @@ while($data = mysqli_fetch_assoc($res))
                 </div>
           <div class="row">    
        
-            <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
+                <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
                         <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal'.$data['id'].'">
                      Delete
