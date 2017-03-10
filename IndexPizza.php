@@ -76,6 +76,7 @@ include 'planning.php';
       <!-- Fin grosse image et suggestions-->
 
 <?PHP
+// permet de compter le nombre de base et de modifier le nombre de row à l'affihage
 $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix
 FROM pizza WHERE cache = 0 ORDER BY petit_prix";
 $res = mysqli_query($bdd, $req);

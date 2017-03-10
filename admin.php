@@ -57,7 +57,7 @@ if (!empty($_POST)) {
         if (mysqli_query($bdd, $req)){
             echo mysqli_error($bdd);
         } else {
-            header('Location: admin.php');
+            header('Location: validation.php');
         }
     }
 }
@@ -151,7 +151,7 @@ echo '  <div class="row" >
 
 echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center titre_admin">Modifier une pizza</h2>
 <br>';
-
+// permet de passer la case cache à 1 ou à 0
 $reqliste = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache 
             FROM pizza";
 $resliste = mysqli_query($bdd, $reqliste);
