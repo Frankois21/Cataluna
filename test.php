@@ -60,7 +60,7 @@ if (!empty($_POST)) {
         if (mysqli_query($bdd, $req)){
             echo mysqli_error($bdd);
         } else {
-            header('Location: admin.php');
+            header('Location: test.php');
         }
     }
 }
@@ -151,17 +151,54 @@ echo '</div>
 echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center">Modifier une pizza</h2>
 <br>';
 
-$req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix 
+
+
+$req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache 
             FROM pizza";
 $res = mysqli_query($bdd, $req);
+
+
+
+
+
+
+if (!empty($_POST['id'])) {
+    $id = mysqli_real_escape_string($bdd, trim($_POST['id']));
+
+    if ($id) {
+
+        if ($cache[0] == 0) {
+            $req = "UPDATE cataluna.pizza SET cache = 1 WHERE id = $id";
+
+        } else {
+            $req = "UPDATE cataluna.pizza SET cache = 0 WHERE id = $id";
+        }
+
+        if (mysqli_query($bdd, $req)) {
+        }
+    }
+}
+
+/*if ($cache[0] == 1){
+
+
+}*/
 
 
 echo '<div class="row">';
 while($data = mysqli_fetch_assoc($res))
 {
+    $textbutton = 'Masquer';
+    $icone = '';
+    if ($data['cache'] == 1){
+        $textbutton = 'Afficher';
+        $icone = 'glyphicon glyphicon-ban-circle" aria-hidden="true';
+    }
+
+
     echo '<div class="col-sm-6 col-md-4 col-lg-4 pizza">
       <div class="text-center">
-          <h3><span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>'.$data['nom'].'</h3>
+        <h3><span class="'.$icone.'"></span> '.$data['nom'].'</h3>
           <p>'.$data['ingredients'].'</p>
           <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
           <p>'.$data['base'].'</p>
@@ -172,20 +209,18 @@ while($data = mysqli_fetch_assoc($res))
             <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
           </form>
                       
-          <form  class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+          <form  class="col-sm-2 col-sm-offset-1" method="POST" action="test.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <input  class="btn btn-default" type="submit" value="Masquer" name="cache"/>
+            <input  class="btn btn-default" type="submit" value="'.$textbutton.'" name="cache"/>
           </form>
                       
           <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
             <a href="admin.php?id='.$data['id'].'" class="btn btn-warning">Modifier</a>
-           
-
-
-  </div>
+          </form>
+    </div>
             
-      </form>
+      
   </div>  
 </div>';
 }
@@ -193,19 +228,6 @@ while($data = mysqli_fetch_assoc($res))
 echo '</div>';
 
 
-/*if (isset(_GET['id'])) {
-
-}
-
-if ($data['cache'] == 1){
-    $req = "UPDATE cataluna.pizza SET cache = 1 WHERE id = '$id'";
-}
-
-if ($data['cache'] == 0) {
-    $req = "UPDATE cataluna.pizza SET cache = 1 WHERE id = '$id'";
-}
-
-$res = mysqli_query($bdd, $req);*/
 
 ?>
 

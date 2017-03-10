@@ -207,7 +207,7 @@ while($data = mysqli_fetch_assoc($res))
             
 
                       
-              <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+        echo'      <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
                 <input type="hidden" name="id" value="'.$data['id'].'"/>
                 <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
               </form>
