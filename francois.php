@@ -194,11 +194,11 @@ while($data = mysqli_fetch_assoc($res))
                 </div>  
                </form>  
                       
-                        <a href="admin.php?id='.$data['id'].'" class="btn btn-warning">Modifier</a>
-                     
-                 
-          </div> 
-      </div>';
+            <a href="admin.php?id='.$data['id'].'" class="btn btn-warning">Modifier</a>
+  
+
+  </div>  
+</div>';
 
 }
 

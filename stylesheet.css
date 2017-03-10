@@ -50,6 +50,13 @@ a:link {
 	height: 25px;
 }
 
+/*titre*/
+
+h1 {
+	text-align: center;
+	color: #CC0001;
+	font-size: 60px;
+}
 
 /*BIOGRAPHIE*/
 #biographie {
@@ -69,7 +76,9 @@ a:link {
 	height: 10%;
 }
 
-
+strong {
+	color: #CC0001;
+}
 
 /*PLANNING*/
 
@@ -264,8 +273,7 @@ h4 {
 	color: #CC0001;
 }
 
-.bouton {
-	margin-bottom: 30px;
+.boutonadmin {
 }
 
 /*MEDIA QUERRIES*/

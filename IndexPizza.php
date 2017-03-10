@@ -10,11 +10,15 @@ mysqli_set_charset($bdd,"utf8");
 ?>
 
 
+<!-- Titre-->
+    <h1>CATALUNA PIZZ'</h1>
+
+
   <!-- Qui sommes nous-->
 	<div class="container-fluid hidden-xs" >
 		<div class="row"> 
     <div><img src="Images/toro.jpg" class=" col-sm-3 col-sm-offset-2 img-circle img-bio"></div>
-		<section class = "col-sm-5 col-lg-5" id="biographie"> <p>Ouvert depuis Juillet 2015, nous confectionnons nos pizzas à partir des meilleurs ingrédients. Nous proposons aussi des boissons pour accompagner vos déjeuner et dîners.</p> </section>
+            <section class = "col-sm-5 col-lg-5" id="biographie"> <p>Ouvert depuis Juillet 2015, nous confectionnons nos <strong>pizzas</strong> à partir des meilleurs ingrédients. Nous proposons aussi des boissons pour accompagner vos déjeuner et dîners.</p> </section>
 		</div>
 	</div>
 <br>

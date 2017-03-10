@@ -19,7 +19,7 @@
 
         <div class="navbar-header-default">
             <img class="pull-left img-circle img-responsive hidden-xs" src="Images/logo_toro.png" style="height: 50px;" alt="logo">
-            <a class="navbar-brand" href="#">Cataluna Pizz' - 06 51 75 79 20</a>
+            <a class="navbar-brand" href="IndexPizza.php">Cataluna Pizz' - 06 51 75 79 20</a>
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
