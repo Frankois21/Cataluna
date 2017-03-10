@@ -5,7 +5,7 @@
 
 mysqli_set_charset($bdd,"utf8");
 
-$nom = $ingredients = $base = $petit_prix = $grand_prix = $cache = $id='';
+$nom = $ingredients = $base = $petit_prix = $grand_prix = $id=''; $cache =0;
 
 
     if (isset($_GET['id'])) {
@@ -153,7 +153,7 @@ echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center titre_admin">Modifier une
 <br>';
 
 $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix 
-            FROM pizza";
+            FROM pizza ORDER BY base";
 $res = mysqli_query($bdd, $req);
 
 
