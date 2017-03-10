@@ -157,32 +157,22 @@ $req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache
             FROM pizza";
 $res = mysqli_query($bdd, $req);
 
-
-
-
-
-
 if (!empty($_POST['id'])) {
     $id = mysqli_real_escape_string($bdd, trim($_POST['id']));
-
     if ($id) {
-
+        $reqcache = "SELECT cache FROM pizza WHERE id=$id";
+        $rescache = mysqli_query($bdd, $reqcache);
+        $cache = mysqli_fetch_row($rescache);
         if ($cache[0] == 0) {
             $req = "UPDATE cataluna.pizza SET cache = 1 WHERE id = $id";
-
         } else {
             $req = "UPDATE cataluna.pizza SET cache = 0 WHERE id = $id";
         }
-
         if (mysqli_query($bdd, $req)) {
         }
     }
 }
 
-/*if ($cache[0] == 1){
-
-
-}*/
 
 
 echo '<div class="row">';
@@ -203,6 +193,7 @@ while($data = mysqli_fetch_assoc($res))
           <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
           <p>'.$data['base'].'</p>
       </div>
+      
       <div class="row boutons">    
           <form  class="col-sm-2 col-sm-offset-1" method="POST" action="deletepizza.php">
             <input type="hidden" name="id" value="'.$data['id'].'"/>
@@ -231,4 +222,27 @@ echo '</div>';
 
 ?>
 
+<form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal'.$data['id'].'">
+        Delete
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal'.$data['id'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;&times;&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" value="titre">Suppression pizza</h4>
+                </div>
 
+                <div class="modal-body"> Etes-vous sûr de supprimer la pizza '.$data['nom'].' ?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">"Oups noooon</button>
+                    <input type="hidden" name="id" value="'.$data['id'].'"/>
+                    <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

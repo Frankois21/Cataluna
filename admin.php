@@ -5,7 +5,7 @@
 
 mysqli_set_charset($bdd,"utf8");
 
-$nom = $ingredients = $base = $petit_prix = $grand_prix = $id=''; $cache =0;
+$nom = $ingredients = $base = $petit_prix = $grand_prix = $id=''; $cache = 0;
 
 
     if (isset($_GET['id'])) {
@@ -152,34 +152,85 @@ echo '  <div class="row" >
 echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center titre_admin">Modifier une pizza</h2>
 <br>';
 
-$req = "SELECT id, nom, ingredients, base, petit_prix, grand_prix 
-            FROM pizza ORDER BY base";
-$res = mysqli_query($bdd, $req);
+$reqliste = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache 
+            FROM pizza";
+$resliste = mysqli_query($bdd, $reqliste);
 
-
-echo '<div class="row">';
-while($data = mysqli_fetch_assoc($res))
-{
-    echo '<div class="col-sm-6 col-md-4 col-lg-4 pizza">
-      <div class="text-center">
-          <h3>'.$data['nom'].'</h3>
-          <p>'.$data['ingredients'].'</p>
-          <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
-          
-         <form  class="col-sm-2 col-sm-offset-3" method="POST" action="deletepizza.php">
-            <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
-          </form>
-                      
-          <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
-            <input type="hidden" name="id" value="'.$data['id'].'"/>
-            <a href="admin.php?id='.$data['id'].'" class="btn btn-primary">Modifier</a>
-          </form>
-      </div>  
-    </div>';
+if (!empty($_POST['id'])) {
+    $id = mysqli_real_escape_string($bdd, trim($_POST['id']));
+    if ($id) {
+        $reqcache = "SELECT cache FROM pizza WHERE id=$id";
+        $rescache = mysqli_query($bdd, $reqcache);
+        $cache = mysqli_fetch_row($rescache);
+        if ($cache[0] == 0) {
+            $req = "UPDATE cataluna.pizza SET cache = 1 WHERE id = $id";
+        } else {
+            $req = "UPDATE cataluna.pizza SET cache = 0 WHERE id = $id";
+        }
+        if (mysqli_query($bdd, $req)) {
+        }
+    }
 }
 
 
 
+echo '<div class="row">';
+while($data = mysqli_fetch_assoc($resliste))
+{
+    $textbutton = 'Masquer';
+    $icone = '';
+    if ($data['cache'] == 1){
+        $textbutton = 'Afficher';
+        $icone = 'glyphicon glyphicon-ban-circle" aria-hidden="true';
+    }
+    echo '<div class="col-sm-6 col-md-4 col-lg-4 pizza">
+      <div class="text-center">
+        <h3><span class="'.$icone.'"></span> '.$data['nom'].'</h3>
+          <p>'.$data['ingredients'].'</p>
+          <p class="prix">'.$data['petit_prix'].'€  - '.$data['grand_prix'].'€</p>
+          <p>'.$data['base'].'</p>
+      </div>
+      
+      <div class="row boutons">    
+            <form  class="col-sm-2 col-sm-offset-2" method="POST" action="deletepizza.php">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal'.$data['id'].'">
+                    Delete
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal'.$data['id'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;&times;&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel" value="titre">Suppression pizza</h4>
+                            </div>
+            
+                            <div class="modal-body"> Etes-vous sûr de supprimer la pizza '.$data['nom'].' ?</div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">"Oups noooon</button>
+                                <input type="hidden" name="id" value="'.$data['id'].'"/>
+                                <input  class="btn btn-danger" type="submit" value="Delete" name="delete"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                      
+          <form  class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+            <input type="hidden" name="id" value="'.$data['id'].'"/>
+            <input  class="btn btn-default" type="submit" value="'.$textbutton.'" name="cache"/>
+          </form>
+                      
+          <form class="col-sm-2 col-sm-offset-1" method="POST" action="admin.php">
+            <input type="hidden" name="id" value="'.$data['id'].'"/>
+            <a href="admin.php?id='.$data['id'].'" class="btn btn-warning">Modifier</a>
+          </form>
+    </div>       
+</div>';
+}
+
 echo '</div>';
+include 'footer.php';
+
 ?>
