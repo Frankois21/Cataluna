@@ -42,15 +42,16 @@ if (!empty($_POST)) {
                                           ingredients='$ingredients',
                                           base='$base',
                                           petit_prix='$petit_prix',
-                                          grand_prix='$grand_prix'        
+                                          grand_prix='$grand_prix',
+                                          cache = 0                                           
                                       WHERE id='$id'";
             //echo $req;
 
 
 
         } else {
-            $req = "INSERT INTO pizza (nom, ingredients, base, petit_prix, grand_prix)
-                        VALUES ('$nom', '$ingredients', '$base', '$petit_prix', '$grand_prix')";
+            $req = "INSERT INTO pizza (nom, ingredients, base, petit_prix, grand_prix, cache)
+                        VALUES ('$nom', '$ingredients', '$base', '$petit_prix', '$grand_prix', 0)";
             //echo $req;
         }
 
@@ -153,7 +154,7 @@ echo ' <!-- LISTE DES PIZZAS--> <h2 class="text-center titre_admin">Modifier une
 <br>';
 // permet de passer la case cache à 1 ou à 0
 $reqliste = "SELECT id, nom, ingredients, base, petit_prix, grand_prix, cache 
-            FROM pizza";
+            FROM pizza ORDER BY base";
 $resliste = mysqli_query($bdd, $reqliste);
 
 if (!empty($_POST['id'])) {
